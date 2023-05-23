@@ -30,6 +30,8 @@ jobs:
       with:
         java-version: '18'
         distribution: 'temurin'
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@v1.2.0
     - name: Install Chromedriver
       run: |
           LATEST_CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
