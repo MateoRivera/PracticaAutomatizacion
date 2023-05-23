@@ -1,8 +1,6 @@
 package co.edu.udea.certification.calidad.stepdefinitions;
 
 import co.edu.udea.certification.questions.IAmInConsumerLoansPage;
-import co.edu.udea.certification.questions.Validacion;
-import co.edu.udea.certification.tasks.OpenThe;
 import co.edu.udea.certification.tasks.OpenTheConsumerLoansPage;
 import co.edu.udea.certification.userinterfaces.UsuarioPage;
 import io.cucumber.java.Before;
@@ -19,7 +17,6 @@ import org.openqa.selenium.WebDriver;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-@RunWith(CucumberWithSerenity.class)
 public class SimulateFreeInvestmentLoanStepDefinitions {
     @Managed(driver = "chrome")
     public WebDriver driver;

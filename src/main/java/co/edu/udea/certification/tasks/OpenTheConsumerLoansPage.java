@@ -1,7 +1,6 @@
 package co.edu.udea.certification.tasks;
 
 import co.edu.udea.certification.interactions.ConsumerLoansPage;
-import co.edu.udea.certification.interactions.UdeaHomePage;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
