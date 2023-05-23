@@ -17,7 +17,6 @@ import org.openqa.selenium.WebDriver;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-@RunWith(CucumberWithSerenity.class)
 public class SimulateFreeInvestmentLoanStepDefinitions {
     @Managed(driver = "chrome")
     public WebDriver driver;
