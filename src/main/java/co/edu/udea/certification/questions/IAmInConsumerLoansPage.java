@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
-import static co.edu.udea.certification.userinterfaces.UsuarioPage.TEXT_VALIDATION;
 import static co.edu.udea.certification.userinterfaces.UsuarioPage.TEXT_VALIDATION_I_AM_IN_CONSUMER_LOANS_PAGE;
 
 public class IAmInConsumerLoansPage implements Question<Boolean> {
