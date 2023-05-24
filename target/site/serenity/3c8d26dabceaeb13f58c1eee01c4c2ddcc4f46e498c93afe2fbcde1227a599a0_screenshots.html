@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="e3d64eab2a5a8271023d0ab94aeb4589bdd1f84b1aa9db83c5f1e6705ad058c7.html">Simulate Free Investment Loan In Bancolombia/Personas</a></span>
+                > <span class="truncate-60"><a
+                    href="3c8d26dabceaeb13f58c1eee01c4c2ddcc4f46e498c93afe2fbcde1227a599a0.html">From bancolombia personas I can open the simulator of free investment credit and make a simulation </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 23-05-2023 19:20</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Simulate Free Investment Loan In Bancolombia/Personas </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As investor I want to simulate a free investment loan for<br />
+knowing the benefits I would have with bancolombia
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">From bancolombia personas I can open the simulator of free investment credit and make a simulation
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="995d5fc3e90444148db9d99bb025d7aa71b93c3eca2ede7635c08f88fa30c8fb.png" title=" Given I am in personas of bancolombia" width="1920"/>
+                <img src="854a11e20e7d9e8f344b68fd80e0989791b72409e81ca09f3fa69007423545c3.png" title=" When I close offers" width="1920"/>
+                <img src="854a11e20e7d9e8f344b68fd80e0989791b72409e81ca09f3fa69007423545c3.png" title=" Lossuperconocidos close offers" width="1920"/>
+                <img src="854a11e20e7d9e8f344b68fd80e0989791b72409e81ca09f3fa69007423545c3.png" title=" LosSuperConocidos opens the Usuario page" width="1920"/>
+                <img src="854a11e20e7d9e8f344b68fd80e0989791b72409e81ca09f3fa69007423545c3.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="a272a2ef321376f2159144acbb3b0658301b52ab6b3dd487a6a1381fd9b75196.png" title=" LosSuperConocidos clicks on Close initial offers" width="1920"/>
+                <img src="245538b7d7c5369b23faae893bd9cf9b6cff76fc48a3e43a0a11d1fa81ebc45b.png" title=" LosSuperConocidos clicks on Close initial offers (completed)" width="1920"/>
+                <img src="245538b7d7c5369b23faae893bd9cf9b6cff76fc48a3e43a0a11d1fa81ebc45b.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="245538b7d7c5369b23faae893bd9cf9b6cff76fc48a3e43a0a11d1fa81ebc45b.png" title=" Lossuperconocidos close offers (completed)" width="1920"/>
+                <img src="77521b67f551cfbfd01fa92fc179cca90d20763704998ecdc625539686d02d8e.png" title=" When I close offers (completed)" width="1920"/>
+                <img src="d03e7338b5c2c3651c18cb009029b3736ff8b5e4a54928682affc0939e3f7fb6.png" title=" And I click the button know more in credits zone" width="1920"/>
+                <img src="d03e7338b5c2c3651c18cb009029b3736ff8b5e4a54928682affc0939e3f7fb6.png" title=" Lossuperconocidos open the consumer loans page" width="1920"/>
+                <img src="d03e7338b5c2c3651c18cb009029b3736ff8b5e4a54928682affc0939e3f7fb6.png" title=" LosSuperConocidos opens the Usuario page" width="1920"/>
+                <img src="6cea3081d2bb2fc7c7ffb541e28e60a3b657de2ba76a68597e4de68e5167195d.png" title=" LosSuperConocidos opens the Usuario page (completed)" width="1920"/>
+                <img src="6cea3081d2bb2fc7c7ffb541e28e60a3b657de2ba76a68597e4de68e5167195d.png" title=" Lossuperconocidos consumer loans page" width="1920"/>
+                <img src="f3bcf7f331bf0e473d900986a54ac4d69e9ee617fc604eb1b6ca59ef553072e9.png" title=" LosSuperConocidos clicks on Link know more credit zone" width="1920"/>
+                <img src="88f651f1169c79e52f14ce565c457ce10ce0cae3ce4bb1e53d45de7aa3fd4e64.png" title=" LosSuperConocidos clicks on Link know more credit zone (completed)" width="1920"/>
+                <img src="88f651f1169c79e52f14ce565c457ce10ce0cae3ce4bb1e53d45de7aa3fd4e64.png" title=" Lossuperconocidos consumer loans page (completed)" width="1920"/>
+                <img src="88f651f1169c79e52f14ce565c457ce10ce0cae3ce4bb1e53d45de7aa3fd4e64.png" title=" Lossuperconocidos open the consumer loans page (completed)" width="1920"/>
+                <img src="b76944fb415d223a7c459f2d4db2d02ed22e99807b722cdef2699730d8800aff.png" title=" And I click the button know more in credits zone (completed)" width="1920"/>
+                <img src="d9df83856d7766eddae48fdedfe5c1841ffd04354759d0a5e2dd05cf8d33773b.png" title=" And I click on simulate at Free investment credit Bancolombia zone" width="1920"/>
+                <img src="d9df83856d7766eddae48fdedfe5c1841ffd04354759d0a5e2dd05cf8d33773b.png" title=" Lossuperconocidos open simulator free investment credit" width="1920"/>
+                <img src="d9df83856d7766eddae48fdedfe5c1841ffd04354759d0a5e2dd05cf8d33773b.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="d9df83856d7766eddae48fdedfe5c1841ffd04354759d0a5e2dd05cf8d33773b.png" title=" LosSuperConocidos clicks on Simulate button" width="1920"/>
+                <img src="d9df83856d7766eddae48fdedfe5c1841ffd04354759d0a5e2dd05cf8d33773b.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="96cbe04f551f08ee955ef796cd97a40b0fb7565ba6fd52c70ab89cfad1bd4d73.png" title=" Lossuperconocidos open simulator free investment credit (completed)" width="1920"/>
+                <img src="96cbe04f551f08ee955ef796cd97a40b0fb7565ba6fd52c70ab89cfad1bd4d73.png" title=" And I click on simulate at Free investment credit Bancolombia zone (completed)" width="1920"/>
+                <img src="1a8b19d9530a146c52037a945afe616d5c21ecb4c5d9b67108372b38f4924383.png" title=" And I click on continue" width="1920"/>
+                <img src="1a8b19d9530a146c52037a945afe616d5c21ecb4c5d9b67108372b38f4924383.png" title=" Lossuperconocidos accept features" width="1920"/>
+                <img src="1a8b19d9530a146c52037a945afe616d5c21ecb4c5d9b67108372b38f4924383.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="1a8b19d9530a146c52037a945afe616d5c21ecb4c5d9b67108372b38f4924383.png" title=" LosSuperConocidos clicks on Continue" width="1920"/>
+                <img src="76ebf16aacfeb766b68c46b1328cc842f7fef5df51d245dfaf25e20486d333f9.png" title=" LosSuperConocidos clicks on Continue (completed)" width="1920"/>
+                <img src="76ebf16aacfeb766b68c46b1328cc842f7fef5df51d245dfaf25e20486d333f9.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="76ebf16aacfeb766b68c46b1328cc842f7fef5df51d245dfaf25e20486d333f9.png" title=" Lossuperconocidos accept features (completed)" width="1920"/>
+                <img src="76ebf16aacfeb766b68c46b1328cc842f7fef5df51d245dfaf25e20486d333f9.png" title=" And I click on continue (completed)" width="1920"/>
+                <img src="a787c55aa2157f5cf5f4535db27a977ca6f162e9e3ba950ca4532af3160f2fe7.png" title=" And I select yes" width="1920"/>
+                <img src="a787c55aa2157f5cf5f4535db27a977ca6f162e9e3ba950ca4532af3160f2fe7.png" title=" Lossuperconocidos accept question" width="1920"/>
+                <img src="a787c55aa2157f5cf5f4535db27a977ca6f162e9e3ba950ca4532af3160f2fe7.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="485f3d5d2d95eff67989ab06994c82ad5ebda229c22211b5dd308c738b181ad8.png" title=" LosSuperConocidos clicks on Yes" width="1920"/>
+                <img src="03bdeb439dd4dc550ccefb2767e54d30d9bf2e93a21e631e8434201098eb42db.png" title=" LosSuperConocidos clicks on Yes (completed)" width="1920"/>
+                <img src="03bdeb439dd4dc550ccefb2767e54d30d9bf2e93a21e631e8434201098eb42db.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="43bce17777af89bd94b3a57cdf32e8cac7f04717966fd608303a074b2980e5ab.png" title=" Lossuperconocidos accept question (completed)" width="1920"/>
+                <img src="43bce17777af89bd94b3a57cdf32e8cac7f04717966fd608303a074b2980e5ab.png" title=" And I select yes (completed)" width="1920"/>
+                <img src="4d1b632afcb90fc19ed17e2475e39d59bf56b5b196c23c79837d457db6dfff51.png" title=" And I set a random number betweeen 1000000 and 500000000 for a loan" width="1920"/>
+                <img src="4d1b632afcb90fc19ed17e2475e39d59bf56b5b196c23c79837d457db6dfff51.png" title=" Lossuperconocidos set amount to be simulated" width="1920"/>
+                <img src="4d1b632afcb90fc19ed17e2475e39d59bf56b5b196c23c79837d457db6dfff51.png" title=" LosSuperConocidos enters '222152103' into Amount to simulate" width="1920"/>
+                <img src="4d1b632afcb90fc19ed17e2475e39d59bf56b5b196c23c79837d457db6dfff51.png" title=" Lossuperconocidos set amount to be simulated (completed)" width="1920"/>
+                <img src="6b940eeb06daba532b3a281fd73bc01b509e55819e15667d5795a4d61b5f5838.png" title=" And I set a random number betweeen 1000000 and 500000000 for a loan (completed)" width="1920"/>
+                <img src="ad2342d4ce73eaa24a0a741f3d1240b0d1ad79515fa55ffccd9e674701df0244.png" title=" And I set a random number betweeen 48 and 84 for months" width="1920"/>
+                <img src="ad2342d4ce73eaa24a0a741f3d1240b0d1ad79515fa55ffccd9e674701df0244.png" title=" Lossuperconocidos set months to be simulated" width="1920"/>
+                <img src="ad2342d4ce73eaa24a0a741f3d1240b0d1ad79515fa55ffccd9e674701df0244.png" title=" LosSuperConocidos enters '77' into Months to simulate" width="1920"/>
+                <img src="c6016362f8b530de0501d58f1f5ea318e229d74a966700ae1f1bd6897bfae967.png" title=" LosSuperConocidos enters '77' into Months to simulate (completed)" width="1920"/>
+                <img src="c6016362f8b530de0501d58f1f5ea318e229d74a966700ae1f1bd6897bfae967.png" title=" Lossuperconocidos set months to be simulated (completed)" width="1920"/>
+                <img src="c6016362f8b530de0501d58f1f5ea318e229d74a966700ae1f1bd6897bfae967.png" title=" And I set a random number betweeen 48 and 84 for months (completed)" width="1920"/>
+                <img src="98bebf4a71d0a559bb092871069f980718cef814621d3e0b419314e9397a2912.png" title=" And I set a random date" width="1920"/>
+                <img src="7cea86d123a08dd18b17d65ecd31e9d4f6d862b4e8ede039e3caff341e31c3cd.png" title=" Lossuperconocidos set my birth date" width="1920"/>
+                <img src="7cea86d123a08dd18b17d65ecd31e9d4f6d862b4e8ede039e3caff341e31c3cd.png" title=" Lossuperconocidos select date" width="1920"/>
+                <img src="7cea86d123a08dd18b17d65ecd31e9d4f6d862b4e8ede039e3caff341e31c3cd.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="98bebf4a71d0a559bb092871069f980718cef814621d3e0b419314e9397a2912.png" title=" LosSuperConocidos clicks on Input for enter the birthdate" width="1920"/>
+                <img src="b5bf02149e4e5200cb4249c3a5fb2c36f358b943c00c478c95631edb71aa27b9.png" title=" LosSuperConocidos clicks on Input for enter the birthdate (completed)" width="1920"/>
+                <img src="b5bf02149e4e5200cb4249c3a5fb2c36f358b943c00c478c95631edb71aa27b9.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="025fd93ec93187ddeb5ed09f07a4f60db3dd61f15d66cc811f4eef082a9ee5a6.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="025fd93ec93187ddeb5ed09f07a4f60db3dd61f15d66cc811f4eef082a9ee5a6.png" title=" LosSuperConocidos clicks on Year 2000" width="1920"/>
+                <img src="176392cdced4a9b4508097fc79f6ac259dd263e70fea6d36380fa9f9495f521e.png" title=" LosSuperConocidos clicks on Year 2000 (completed)" width="1920"/>
+                <img src="176392cdced4a9b4508097fc79f6ac259dd263e70fea6d36380fa9f9495f521e.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="176392cdced4a9b4508097fc79f6ac259dd263e70fea6d36380fa9f9495f521e.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="176392cdced4a9b4508097fc79f6ac259dd263e70fea6d36380fa9f9495f521e.png" title=" LosSuperConocidos clicks on Month January" width="1920"/>
+                <img src="495ee81524325c357a56ed134ed02a4da8c6f3deca973db2681ee3bdb41abb95.png" title=" LosSuperConocidos clicks on Month January (completed)" width="1920"/>
+                <img src="495ee81524325c357a56ed134ed02a4da8c6f3deca973db2681ee3bdb41abb95.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="495ee81524325c357a56ed134ed02a4da8c6f3deca973db2681ee3bdb41abb95.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="495ee81524325c357a56ed134ed02a4da8c6f3deca973db2681ee3bdb41abb95.png" title=" LosSuperConocidos clicks on Day 23" width="1920"/>
+                <img src="e63451d63d5d6dbd5dc61f965cac06649b3f38a8ed0b5b052349ef98df707c2b.png" title=" LosSuperConocidos clicks on Day 23 (completed)" width="1920"/>
+                <img src="e63451d63d5d6dbd5dc61f965cac06649b3f38a8ed0b5b052349ef98df707c2b.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="e63451d63d5d6dbd5dc61f965cac06649b3f38a8ed0b5b052349ef98df707c2b.png" title=" Lossuperconocidos select date (completed)" width="1920"/>
+                <img src="e63451d63d5d6dbd5dc61f965cac06649b3f38a8ed0b5b052349ef98df707c2b.png" title=" Lossuperconocidos set my birth date (completed)" width="1920"/>
+                <img src="5d9797ea96051698534c8ce6fc182c974d860c370f7a374df85d1e9d41c99cc2.png" title=" And I set a random date (completed)" width="1920"/>
+                <img src="a0ad0f567de1c832bf21f2937c1d8ea4af9928c40ae948aa7602bab54db09ab7.png" title=" And I click on simulate" width="1920"/>
+                <img src="a0ad0f567de1c832bf21f2937c1d8ea4af9928c40ae948aa7602bab54db09ab7.png" title=" Lossuperconocidos simulate" width="1920"/>
+                <img src="a0ad0f567de1c832bf21f2937c1d8ea4af9928c40ae948aa7602bab54db09ab7.png" title=" Lossuperconocidos click on" width="1920"/>
+                <img src="a0ad0f567de1c832bf21f2937c1d8ea4af9928c40ae948aa7602bab54db09ab7.png" title=" LosSuperConocidos clicks on Simulate" width="1920"/>
+                <img src="a0ad0f567de1c832bf21f2937c1d8ea4af9928c40ae948aa7602bab54db09ab7.png" title=" Lossuperconocidos click on (completed)" width="1920"/>
+                <img src="a0ad0f567de1c832bf21f2937c1d8ea4af9928c40ae948aa7602bab54db09ab7.png" title=" Lossuperconocidos simulate (completed)" width="1920"/>
+                <img src="0dacd1a73a8990de0fd296190f52d9b4bd8ff4a4e43f2f506e25d501f27d9cf6.png" title=" And I click on simulate (completed)" width="1920"/>
+                <img src="0732580ec9be5b08b78d52d521f4382fb2b60d802c05951f70c9e86dc71dc8be.png" title=" Then it carries me three options of credits" width="1920"/>
+                <img src="0732580ec9be5b08b78d52d521f4382fb2b60d802c05951f70c9e86dc71dc8be.png" title=" Then i see three options for investing should be (true)" width="1920"/>
+                <img src="0732580ec9be5b08b78d52d521f4382fb2b60d802c05951f70c9e86dc71dc8be.png" title=" Then it carries me three options of credits (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>
